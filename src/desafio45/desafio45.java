@@ -20,8 +20,9 @@ public class desafio45 {
 			if (ingresado == socio[i]) {
 
 				System.out.println("El numero de socio corresponde a: " + names[i]);
-				
+			break;	
 			}
+			
 		}
 
 	}
