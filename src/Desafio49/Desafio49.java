@@ -57,7 +57,7 @@ public class Desafio49 {
 
 		}
 
-		System.out.println("Los dni ordenados de forma ascendiente son:: ");
+		System.out.println("Los dni ordenados de forma ascendiente son: ");
 
 		for (int ordenamientomayor : dni) {
 

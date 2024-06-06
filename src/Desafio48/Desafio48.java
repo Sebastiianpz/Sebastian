@@ -10,7 +10,7 @@ public static void main(String[] args) {
 
 	Scanner data = new Scanner (System.in);
 	
-	String[] apellidos = new String[4];
+	String[] apellidos = new String[5];
 	
 	for (int i = 0; i < apellidos.length; i++) {
 		
