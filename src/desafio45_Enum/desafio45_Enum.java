@@ -35,7 +35,7 @@ public class desafio45_Enum {
 		boolean existeono = lista.contains(ingreso);
 		System.out.println("Su pais es sudamericano?: " + existeono); // En pantalla: true
 
-		System.out.println("Lista de paises ordenadas: ");
+		System.out.println("\nLista de paises ordenadas: \n");
 
 		for (String string : lista) {
 			System.out.println(string);
