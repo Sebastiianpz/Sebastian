@@ -12,9 +12,10 @@ public class desafio52_Enum {
 		if (valorTotal > 15000) {
 
 			int descuento = (int) (valorTotal - (valorTotal * 0.1));
+			
 			return descuento;
-
 		} else {
+			
 			return valorTotal;
 		}
 	}
@@ -31,7 +32,7 @@ public class desafio52_Enum {
 
 		System.out.println("El valor total es de: " + descontar(28000));
 		System.out.println("\nEl valor total es de: " + descontar(11000));
-
+		
 		System.out.println("\n" + descontar(ingresarTotal()));
 	}
 

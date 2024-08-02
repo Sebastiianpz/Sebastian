@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class desafio53_Enum {
 
 	static Scanner data = new Scanner(System.in);
-	static int notas, max = 0, min = 10, suma = 0, divi = 0;
-
+	
+	static int notas, max = 0, min = 1000, suma = 0;
+	static float divi = 0;
+	
 	public static void ingresarNotas() {
 
 		for (int i = 1; i <= 5; i++) {
@@ -14,37 +16,44 @@ public class desafio53_Enum {
 			System.out.println("Ingrese la nota(1-10) n" + i + ": ");
 			notas = data.nextInt();
 			
-		}
-	}
 
-	public static int mayorMenor() {
+			if (notas <= min) {
 
-		if (notas >= max) {
-
-			max = notas;
-			return max;
-		}
-		else {
+				min = notas;
+			}
 			
-			min = notas;
-			return min;
+			if (notas >= max) {
+
+				max = notas;
+			}
+			suma = suma + notas;
+
 		}
 	}
-	
-	public static int cuentasNotas() {
+
+	public static void menorYmayor() {
 		
-		suma = suma + notas;
-		divi = suma / 5;
-		
-		return divi;
-	}
+		System.out.println("El numero menor es: " + min);
+		System.out.println("El numero mayor es: " + max);
+
+		}
 	
+
+	
+
+	public static void cuentasNotas() {
+
+			divi = suma / 5;
+			System.out.println("El promiedo de las 5 notas es: " + divi);
+		}
+
+	
+
 	public static void main(String[] args) {
-		
+
 		ingresarNotas();
-		System.out.println(mayorMenor());
+		menorYmayor();
 		cuentasNotas();
-		
-		
+
 	}
 }
