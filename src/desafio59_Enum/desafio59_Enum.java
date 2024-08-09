@@ -5,61 +5,40 @@ import java.util.Scanner;
 
 public class desafio59_Enum {
 
-	static Scanner data = new Scanner(System.in);
+	public static void main(String[] args) {
 
-	static int edad;
-
-	public static void ingresoEdad() {
+		Scanner data = new Scanner(System.in);
 
 		System.out.println("Ingrese su edad: ");
-		edad = data.nextInt();
-//
-//		while (edad < 0) {
-//			
-//			try {
-//				
-//				if(edad < 0) {
-//					
-//					throw new ArithmeticException("La edad no puede ser un numero negativo.");
-//				}	
-//			}	
-//			
-//			catch (InputMismatchException e) {
-//       
-//                System.out.println("Error: Debe ingresar un número válido.");
-//			
-//			
-//			}
+		int edad = data.nextInt();
 
-		while (edad < 0) {
+//		while (edad < 0) {
 
 			try {
 
 				if (edad < 0) {
 
-					throw new ArithmeticException("La edad no puede ser un número negativo.");
+					throw new ArithmeticException();	
 				}
+				
+			} catch (ArithmeticException e) {
+
+				System.out.println("Error numero negativo. Intentar de vuelta: ");
+				edad = data.nextInt();
 
 			} catch (InputMismatchException e) {
 				
-				System.out.println("Error: Debe ingresar un número válido.");
+				System.out.println("Ingresar un numero valido: ");
+				edad = data.nextInt();
+			}
+			
+			finally {
 
-			} catch (ArithmeticException e) {
-				
-				System.out.println("Error: " + e.getMessage());
+				if (edad > 0) {
 
-			} finally {
-	
-				if (edad < 0) {
-					System.out.println("Por favor, intente de nuevo.");
+					System.out.println("Su edad es: " + edad);
 				}
 			}
-		}
-
-		System.out.println("Su edad es: " + edad);
-	}
-
-	public static void main(String[] args) {
-			ingresoEdad();
+//		}
 	}
 }
